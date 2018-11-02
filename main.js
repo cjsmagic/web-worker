@@ -19,13 +19,13 @@ app.controller("webWorkerCtrl", function($scope, $interval) {
 
     worker.onmessage = event => {
       if (event.data) {
-        result.innerText = "data processed!";
-
+        
         switch (event.data.name) {
           case SINGLE_TASK_DONE:
             processSingleTaskDone(event.data.taskInfo);
             break;
           case ALL_TASK_DONE:
+            $scope.resultStatus = "Data processed!";
             $interval.cancel(intervalInstance);
             break;
         }
