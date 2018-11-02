@@ -1,0 +1,55 @@
+body {
+  background-color: #009688;
+}
+.worker-tester {
+  width: 300px;
+  border: 3px solid #009688;
+  background-color: #607d8b;
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+  margin: 100px auto;
+}
+
+#timer,
+#result {
+  height: 50px;
+  border: 2px solid #4caf50;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #3f51b5;
+  box-sizing: border-box;
+  padding: 17px 0px;
+  color: #fff;
+}
+button {
+  width: 250px;
+  color: #fff;
+  height: 45px;
+  font-size: 16px;
+  background-color: #3f51b5;
+  box-shadow: none;
+  border: 1px solid #4caf50;
+  box-shadow: 1px 1px 0px 1px;
+}
+
+.task-report {
+  border: 2px dotted #fff;
+  padding: 30px;
+  list-style: none;
+  height: 500px;
+  overflow-y: auto;
+}
+.task-report .task-item {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border-bottom: 4px solid #3f51b5;
+  padding: 10px 0px;
+}
+.task-report .name {
+  font-size: 20px;
+  color: #fff;
+}
+.task-report .status {
+  color: burlywood;
+}

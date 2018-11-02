@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+    <div class="app-container" ng-app="webWorkerApp" ng-controller="webWorkerCtrl">
+        <div class="worker-tester">
+            <div id="timer" ng-bind="timer"></div>
+            <div id="result" ng-bind="resultStatus"></div>
+            <button ng-click="sendMessageToWorker();" type="button">Post to worker</button>
+        </div>
+
+        <ul class="task-report">
+            <li class="task-item" ng-repeat="taskItem in tasksArray">
+                <span class="name">
+                    {{taskItem.id}}
+                </span>
+                <span class="status">
+                    {{taskItem.status}}
+                </span>
+            </li>
+        </ul>
+    </div>
+    <!-- scripts -->
+    <script src="angular.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
